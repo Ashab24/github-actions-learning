@@ -16,6 +16,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Show runner information
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Files in repo:"
+          ls -la
+          echo "Python version:"
+          python --version
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
